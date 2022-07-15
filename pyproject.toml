@@ -1,0 +1,51 @@
+[tool.pdm]
+includes = []
+[tool.pdm.dev-dependencies]
+dev = [
+    "pre-commit<3.0.0,>=2.13.0",
+    "black>=22.6.0",
+    "requests<3.0.0,>=2.26.0",
+    "redis>=4.3.4",
+    "pymongo>=4.1.1",
+    "PyMySQL<2.0.0,>=1.0.2",
+    "libusb1<3.0.0,>=2.0.1",
+    "pyserial<4.0,>=3.5",
+    "qtconsole>=5.3.1",
+    "notebook<7.0.0,>=6.4.0",
+    "PyQt5<6.0.0,>=5.15.4",
+    "pip-autoremove<1.0.0,>=0.10.0",
+    "pipdeptree<3.0.0,>=2.2.0",
+    "pyarmor<8.0.0,>=7.0.3",
+    "mypy>=0.961",
+    "reorder-python-imports>=3.1.0",
+    "add-trailing-comma>=2.2.3",
+    "pyupgrade>=2.34.0",
+    "pyre-check>=0.9.15",
+    "MonkeyType>=22.2.0",
+    "flake8>=4.0.1",
+]
+[build-system]
+build-backend = "pdm.pep517.api"
+requires = ["pdm-pep517"]
+
+[project]
+authors = [
+  {name = "KageyamaRuka", email = "kageyama.ruka@gmail.com"},
+  {name = "Kageyama Ruka", email = "kageyama.ruka@gmail.com"},
+]
+dependencies = [
+  "Jinja2<4.0.0,>=3.0.1",
+  "PyYAML<6.0.0,>=5.4.1",
+  "greenlet<2.0.0,>=1.1.1",
+  "gevent<22.0.0,>=21.8.0",
+]
+description = "General Automation Toolkit"
+license = {text = "MIT"}
+name = "gat"
+requires-python = ">=3.8,<4.0"
+version = "0.1.0"
+
+[project.urls]
+
+[project.optional-dependencies]
+d = []
