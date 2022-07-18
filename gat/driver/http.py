@@ -25,7 +25,7 @@ class HttpDriver:
         self.debug = config.get("debug", False)
         self.headers: dict[str, str] = {}
         self.data: dict[str, Any] = {}
-        self.name = config.get("udid")
+        self.name = config.get("device_id")
         self.log_path: str = task.log_path if task is not None else None
         self.log = partial(tlog, log_path=self.log_path)
         self.index = int(self.name.split("-")[-1])

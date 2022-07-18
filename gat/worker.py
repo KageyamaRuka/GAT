@@ -113,7 +113,8 @@ class Worker(object):
     def get_local_task(self) -> Task:
         """
         Create task dir if not exist.
-        Filter *.yaml file with the same app platform and name defined in the first yaml file.(need to update to specific driver name in the future)
+        Filter *.yaml file with the same app platform and name defined in the first yaml file.
+        (need to update to specific driver name in the future)
         Collect all the *.yaml file in task dir and create a total task.yaml with all cases.
         """
         if not os.path.exists("task"):
@@ -133,7 +134,7 @@ class Worker(object):
         # TODO move threads info into Task for better remote execution support
         if task.app.platform.lower() == "http":
             task.device = [
-                Device({"udid": f"{task.app.platform.lower()}-{i}"})
+                Device({"device_id": f"{task.app.platform.lower()}-{i}"})
                 for i in range(self.threads)
             ]
 
