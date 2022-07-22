@@ -24,6 +24,7 @@ dev = [
     "MonkeyType>=22.2.0",
     "flake8>=4.0.1",
     "uiautomator2>=2.16.17",
+    "mitmproxy>=8.0.0",
 ]
 [build-system]
 build-backend = "pdm.pep517.api"
