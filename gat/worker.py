@@ -132,7 +132,7 @@ class Worker(object):
         task.name = "Daily Regression"
 
         # TODO move threads info into Task for better remote execution support
-        if task.app.platform.lower() == "http":
+        if self.threads > 1:
             task.device = [
                 Device({"device_id": f"{task.app.platform.lower()}-{i}"})
                 for i in range(self.threads)
@@ -167,11 +167,6 @@ class Worker(object):
             task.case += new_cases
 
         yaml_dumper(task.dictify(), f"{self.log_path}/task.yaml")
-
-        # TODO might need update to send the performance info to remote server directly in the future
-        if task.app.platform.lower() == "http":
-            yaml_dumper(info=[], file_path=f"{self.log_path}/performance.yaml")
-            yaml_dumper(info=[], file_path=f"{self.log_path}/api.yaml")
 
         return task
 
