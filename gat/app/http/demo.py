@@ -1,4 +1,4 @@
-from gat.driver.http import HttpDriver
+from driver.http import HttpDriver
 
 
 class DemoHttp(HttpDriver):

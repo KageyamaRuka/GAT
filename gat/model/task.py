@@ -3,14 +3,14 @@ from typing import List
 from typing import Optional
 from typing import Union
 
-from gat.model import Model
-from gat.model.android import Android
-from gat.model.case import Case
-from gat.model.device import Device
-from gat.model.http import Http
-from gat.model.ios import IOS
-from gat.model.protobuf import Protobuf
-from gat.model.windows import Windows
+from model import Model
+from model.android import Android
+from model.case import Case
+from model.device import Device
+from model.http import Http
+from model.ios import IOS
+from model.protobuf import Protobuf
+from model.windows import Windows
 
 
 class Task(Model):

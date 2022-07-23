@@ -111,7 +111,6 @@ dependencies = [
     "pathspec>=0.9.0",
     "platformdirs>=2",
     "tomli>=1.1.0; python_full_version < \"3.11.0a7\"",
-    "typing-extensions>=3.10.0.0; python_version < \"3.10\"",
 ]
 
 [[package]]
@@ -356,15 +355,6 @@ requires_python = ">=3.5"
 summary = "Internationalized Domain Names in Applications (IDNA)"
 
 [[package]]
-name = "importlib-resources"
-version = "5.8.0"
-requires_python = ">=3.7"
-summary = "Read resources from Python packages"
-dependencies = [
-    "zipp>=3.1.0; python_version < \"3.10\"",
-]
-
-[[package]]
 name = "intervaltree"
 version = "3.1.0"
 summary = "Editable interval tree data structure for Python 2 and 3"
@@ -448,7 +438,6 @@ requires_python = ">=3.7"
 summary = "An implementation of JSON Schema validation for Python"
 dependencies = [
     "attrs>=17.4.0",
-    "importlib-resources>=1.4.0; python_version < \"3.9\"",
     "pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0",
 ]
 
@@ -867,6 +856,11 @@ name = "py"
 version = "1.11.0"
 requires_python = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 summary = "library with cross-python path, ini-parsing, io, code, log facilities"
+
+[[package]]
+name = "py-spy"
+version = "0.3.12"
+summary = "Sampling profiler for Python programs "
 
 [[package]]
 name = "pyarmor"
@@ -1341,12 +1335,6 @@ requires_python = ">=3.4"
 summary = "Makes working with XML feel like you are working with JSON"
 
 [[package]]
-name = "zipp"
-version = "3.8.1"
-requires_python = ">=3.7"
-summary = "Backport of pathlib-compatible object wrapper for zip files"
-
-[[package]]
 name = "zope.event"
 version = "4.5.0"
 summary = "Very basic event publishing system"
@@ -1374,7 +1362,7 @@ dependencies = [
 
 [metadata]
 lock_version = "4.0"
-content_hash = "sha256:d49a54efc97ac89f22028127ac3c4b859a8da03e4b2768cc86cf61de3b044530"
+content_hash = "sha256:51fc27653ab11db0cd8c5544db0b4d53984b697b7d8a1ac4c83f7edcfd850321"
 
 [metadata.files]
 "adbutils 1.0.1" = [
@@ -1847,10 +1835,6 @@ content_hash = "sha256:d49a54efc97ac89f22028127ac3c4b859a8da03e4b2768cc86cf61de3
 "idna 3.3" = [
     {url = "https://files.pythonhosted.org/packages/04/a2/d918dcd22354d8958fe113e1a3630137e0fc8b44859ade3063982eacd2a4/idna-3.3-py3-none-any.whl", hash = "sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff"},
     {url = "https://files.pythonhosted.org/packages/62/08/e3fc7c8161090f742f504f40b1bccbfc544d4a4e09eb774bf40aafce5436/idna-3.3.tar.gz", hash = "sha256:9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"},
-]
-"importlib-resources 5.8.0" = [
-    {url = "https://files.pythonhosted.org/packages/3c/a7/4e4a2176fed10ab233cc39b083ba4ec222ba52de2be606e3e2b5195264e9/importlib_resources-5.8.0-py3-none-any.whl", hash = "sha256:7952325ffd516c05a8ad0858c74dff2c3343f136fe66a6002b2623dd1d43f223"},
-    {url = "https://files.pythonhosted.org/packages/a5/66/b844887f2225049abd75a0c54415d419e334b7a7e2a69c5a5c4968e30906/importlib_resources-5.8.0.tar.gz", hash = "sha256:568c9f16cb204f9decc8d6d24a572eeea27dacbb4cee9e6b03a8025736769751"},
 ]
 "intervaltree 3.1.0" = [
     {url = "https://files.pythonhosted.org/packages/50/fb/396d568039d21344639db96d940d40eb62befe704ef849b27949ded5c3bb/intervaltree-3.1.0.tar.gz", hash = "sha256:902b1b88936918f9b2a19e0e5eb7ccb430ae45cde4f39ea4b36932920d33952d"},
@@ -2382,6 +2366,16 @@ content_hash = "sha256:d49a54efc97ac89f22028127ac3c4b859a8da03e4b2768cc86cf61de3
 "py 1.11.0" = [
     {url = "https://files.pythonhosted.org/packages/f6/f0/10642828a8dfb741e5f3fbaac830550a518a775c7fff6f04a007259b0548/py-1.11.0-py2.py3-none-any.whl", hash = "sha256:607c53218732647dff4acdfcd50cb62615cedf612e72d1724fb1a0cc6405b378"},
     {url = "https://files.pythonhosted.org/packages/98/ff/fec109ceb715d2a6b4c4a85a61af3b40c723a961e8828319fbcb15b868dc/py-1.11.0.tar.gz", hash = "sha256:51c75c4126074b472f746a24399ad32f6053d1b34b68d2fa41e558e6f4a98719"},
+]
+"py-spy 0.3.12" = [
+    {url = "https://files.pythonhosted.org/packages/1e/81/c747f035df5ebf1c9a5e8c108c17346744ea812cbc3186d7f54575b330c9/py_spy-0.3.12-py2.py3-none-macosx_10_7_x86_64.whl", hash = "sha256:608f8cb370d0f9b3bc31999502b375bf8fef555a6bf37e66980ac9e6b340ee2c"},
+    {url = "https://files.pythonhosted.org/packages/f4/56/3b2bc15261959abe4238aa30521a0dd155135c225b33f6d948e79314d1f3/py_spy-0.3.12-py2.py3-none-macosx_10_9_x86_64.macosx_11_0_arm64.macosx_10_9_universal2.whl", hash = "sha256:333c2917ad4383fa105c2caea6d3e375019579888e39942e5062d7048c0132ee"},
+    {url = "https://files.pythonhosted.org/packages/ad/06/0fd93647e453475c1bd41cd7e21b2ab6f70c71512f7e35dd7994cfb13ed5/py_spy-0.3.12-py2.py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:b205dd347ebd4e4f97a4b89950c0caab1ec969f57133ebc2ad6dd66b9c25552d"},
+    {url = "https://files.pythonhosted.org/packages/ff/4f/e6bcfca12b0bf079efbd305fca5f9204fc868752942e4b8817baf9d66b68/py_spy-0.3.12-py2.py3-none-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:3514ba939e7c682e7955cd79dcc79f5e1ce6483e044756925a61e7fb1e80ef77"},
+    {url = "https://files.pythonhosted.org/packages/e5/26/27afad975f87f12d697d783461dc8c0701fd69d57e47b1a7545084e1800f/py_spy-0.3.12-py2.py3-none-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:1ae0e11aac6e1c8679c13251b010ac4aa59230087a09f14517431f66333d7600"},
+    {url = "https://files.pythonhosted.org/packages/7e/22/c8be95e1d7871b9d842aab90d33edc271e737528d9a1d19ca3e58883c486/py_spy-0.3.12-py2.py3-none-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:04005cf6c8367fcdfa039745e00db79f175a1265843daaa9872f8dbb46042763"},
+    {url = "https://files.pythonhosted.org/packages/e4/11/df690ee5eff9de988df01c7beded3b6801e9c586a914f03e9f2b0e642a23/py_spy-0.3.12-py2.py3-none-win_amd64.whl", hash = "sha256:78e96915423bceee1c81e3aa177772c4e299e063e42afbbf2a1918a1facc8b27"},
+    {url = "https://files.pythonhosted.org/packages/79/7a/9330b41f067ace032b1231ed26eab0cfbf61403a1b95d0f367fde9e12725/py_spy-0.3.12.tar.gz", hash = "sha256:e76f115e9b7f1ae629df5a42daf78e3df727cdc31e70e0520c441281dfe18794"},
 ]
 "pyarmor 7.5.1" = [
     {url = "https://files.pythonhosted.org/packages/87/1b/ecb8577fffba663aa8f4a028f96f802d7d0fb7b9c250b9114bd1e455afbb/pyarmor-7.5.1-py2.py3-none-any.whl", hash = "sha256:03f256d22c08849109858976918c7ed5b40fb27c6e30743c27b3d72764a8b909"},
@@ -2944,10 +2938,6 @@ content_hash = "sha256:d49a54efc97ac89f22028127ac3c4b859a8da03e4b2768cc86cf61de3
 "xmltodict 0.13.0" = [
     {url = "https://files.pythonhosted.org/packages/94/db/fd0326e331726f07ff7f40675cd86aa804bfd2e5016c727fa761c934990e/xmltodict-0.13.0-py2.py3-none-any.whl", hash = "sha256:aa89e8fd76320154a40d19a0df04a4695fb9dc5ba977cbb68ab3e4eb225e7852"},
     {url = "https://files.pythonhosted.org/packages/39/0d/40df5be1e684bbaecdb9d1e0e40d5d482465de6b00cbb92b84ee5d243c7f/xmltodict-0.13.0.tar.gz", hash = "sha256:341595a488e3e01a85a9d8911d8912fd922ede5fecc4dce437eb4b6c8d037e56"},
-]
-"zipp 3.8.1" = [
-    {url = "https://files.pythonhosted.org/packages/f0/36/639d6742bcc3ffdce8b85c31d79fcfae7bb04b95f0e5c4c6f8b206a038cc/zipp-3.8.1-py3-none-any.whl", hash = "sha256:47c40d7fe183a6f21403a199b3e4192cca5774656965b0a4988ad2f8feb5f009"},
-    {url = "https://files.pythonhosted.org/packages/3b/e3/fb79a1ea5f3a7e9745f688855d3c673f2ef7921639a380ec76f7d4d83a85/zipp-3.8.1.tar.gz", hash = "sha256:05b45f1ee8f807d0cc928485ca40a07cb491cf092ff587c0df9cb1fd154848d2"},
 ]
 "zope.event 4.5.0" = [
     {url = "https://files.pythonhosted.org/packages/9e/85/b45408c64f3b888976f1d5b37eed8d746b8d5729a66a49ec846fda27d371/zope.event-4.5.0-py2.py3-none-any.whl", hash = "sha256:2666401939cdaa5f4e0c08cf7f20c9b21423b95e88f4675b1443973bdb080c42"},

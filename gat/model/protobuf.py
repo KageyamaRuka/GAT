@@ -1,4 +1,4 @@
-from gat.model import Model
+from model import Model
 
 
 class Protobuf(Model):

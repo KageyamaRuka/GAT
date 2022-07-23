@@ -1,9 +1,12 @@
+import imp
+import json
 import random
 import threading
 import time
 import traceback
-import yaml
 from functools import partial
+
+import yaml
 
 
 def yaml_loader(file_path: str, encoding="utf-8"):
@@ -19,6 +22,11 @@ def yaml_dumper(
 ):
     with open(file_path, mode=mode, encoding=encoding) as f:
         yaml.dump(info, f, allow_unicode=True)
+
+
+def json_loader(file_path: str, encoding="utf-8"):
+    with open(file_path, encoding=encoding) as f:
+        return json.loads(f.read())
 
 
 def file_reader(file_path: str, encoding="utf-8") -> str:

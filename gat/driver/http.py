@@ -1,6 +1,4 @@
-import gevent
 import re
-import requests
 import threading
 from datetime import datetime
 from functools import partial
@@ -9,12 +7,14 @@ from typing import Dict
 from typing import List
 from typing import Optional
 
-from gat.model.case import Case
-from gat.model.task import Task
-from gat.utility import elog_deco
-from gat.utility import tlog
-from gat.utility import yaml_dumper
-from gat.utility import yaml_loader
+import gevent
+import requests
+from model.case import Case
+from model.task import Task
+from utility import elog_deco
+from utility import tlog
+from utility import yaml_dumper
+from utility import yaml_loader
 
 
 class HttpDriver:

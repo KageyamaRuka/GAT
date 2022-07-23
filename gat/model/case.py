@@ -2,7 +2,7 @@ from typing import Any
 from typing import Dict
 from typing import List
 
-from gat.model import Model
+from model import Model
 
 
 class Case(Model):

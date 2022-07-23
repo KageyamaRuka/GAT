@@ -1,11 +1,10 @@
-import gevent
 from functools import partial
 
+import gevent
+from app.http.demo import DemoHttp
 from model.task import Task
 from utility import elog_deco
 from utility import tlog
-
-from gat.app.http.demo import DemoHttp
 
 
 class Conveyor:
@@ -23,7 +22,8 @@ class Conveyor:
         """
         log: logging method for current thread logging
         driver: Driver class for app in task
-        elog_deco: error logging decorator for stack tracing logging when exception raised with current thread info number, Thread created for every device with a case pop from case_pool.
+        elog_deco: error logging decorator for stack tracing logging when exception raised with current thread info number
+        Thread created for every device with a case pop from case_pool.
         """
         self.task: Task = task
         self.log = partial(tlog, log_path=task.log_path)

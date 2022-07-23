@@ -1,8 +1,8 @@
-import uiautomator2
 from typing import Dict
 from typing import Optional
 
-from gat.model.task import Task
+import uiautomator2
+from model.task import Task
 
 
 class Android:
