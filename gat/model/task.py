@@ -4,6 +4,7 @@ from typing import Optional
 from typing import Union
 
 from model import Model
+from model.abtest import ABTest
 from model.android import Android
 from model.case import Case
 from model.device import Device
@@ -20,8 +21,8 @@ class Task(Model):
         self.device: List[Device] = [
             Device(device_info) for device_info in task_info["device"]
         ]
-        self.app: Union[Android, IOS, Windows, Protobuf, Http] = eval(
-            task_info["app"]["platform"].capitalize(),
+        self.app: Union[Android, IOS, Windows, Protobuf, Http, ABTest] = eval(
+            task_info["app"]["platform"],
         )(task_info["app"])
         self.case: List[Case] = [
             Case(case_info) for case_info in task_info["case"]

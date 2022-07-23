@@ -141,3 +141,5 @@ task.yaml
 .pdm.toml
 .pyre_configuration
 .watchmanconfig
+data/
+*shopee*.py

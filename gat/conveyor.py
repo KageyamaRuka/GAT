@@ -1,6 +1,7 @@
 from functools import partial
 
 import gevent
+from app.abtest.shopee import ShopeeABT
 from app.http.demo import DemoHttp
 from model.task import Task
 from utility import elog_deco

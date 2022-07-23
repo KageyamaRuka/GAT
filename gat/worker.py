@@ -148,7 +148,9 @@ class Worker(object):
                 and Task(yaml_loader(f"task/{yaml_file}")).app.driver
                 == task.app.driver
             ]
-            [[task.case.append(case) for case in t.case] for t in ts]
+            for t in ts:
+                for case in t.case:
+                    task.case.append(case)
 
         # re-arrange the case id
         for i in range(len(task.case)):
